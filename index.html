@@ -7,268 +7,242 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    background: linear-gradient(135deg, #e6e9ef 0%, #d0d8e8 100%);
-    font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
-    line-height: 1.5; display: flex; justify-content: center;
-    padding: 2rem 1rem; min-height: 100vh;
+    background: #e6e9ef;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
   }
   .cv {
-    max-width: 1000px; width: 100%; background: #fff;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-    border-radius: 20px; padding: 2.2rem 2.4rem;
+    width: 100%;
+    max-width: 850px;
+    background: #fff;
+    padding: 3rem 3.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   }
+  .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    flex-shrink: 0;
+  }
+  .header-info { flex-grow: 1; }
+  .name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 0.4rem;
+  }
+  .contact-row {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .contact-row strong { font-weight: bold; }
+  .contact-row span { margin-right: 1rem; }
+  .contact-row a { color: #1a0dab; text-decoration: none; }
+  .section { margin-top: 1.8rem; }
+  .section-title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #444;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  .edu-item { margin-bottom: 1.2rem; }
+  .edu-title { font-weight: bold; font-size: 0.95rem; }
+  .edu-school { font-style: italic; font-size: 0.9rem; margin-bottom: 0.2rem; }
+  .edu-meta { font-size: 0.85rem; color: #333; display: flex; flex-wrap: wrap; gap: 1rem; }
+  .edu-meta strong { font-weight: bold; }
+  .project-item { margin-bottom: 1rem; }
+  .project-title { font-weight: bold; font-size: 0.95rem; display: inline; }
+  .project-desc { font-size: 0.9rem; display: inline; }
+  .project-desc-block { font-size: 0.9rem; margin-top: 0.2rem; }
+  .seminar-item { margin-bottom: 1rem; }
+  .seminar-title { font-weight: bold; font-size: 0.95rem; display: inline; }
+  .seminar-desc { font-size: 0.9rem; display: inline; }
+  .award-item { margin-bottom: 0.8rem; font-size: 0.9rem; }
+  .award-name { font-weight: bold; display: inline; }
+  .skill-category { margin-bottom: 1rem; }
+  .skill-category-title { font-weight: bold; font-size: 0.9rem; margin-bottom: 0.2rem; }
+  .skill-list { font-size: 0.9rem; margin-bottom: 0.4rem; }
+  .lang-list { font-size: 0.9rem; }
+  .recommendation { margin-bottom: 1.2rem; font-size: 0.9rem; }
+  .ref-name { font-weight: bold; font-size: 0.95rem; display: inline; }
+  .ref-title { color: #555; font-size: 0.9rem; display: inline; margin-left: 0.5rem; }
+  .ref-desc { margin-top: 0.2rem; margin-bottom: 0.2rem; }
+  .ref-contact { display: flex; flex-wrap: wrap; gap: 1.5rem; font-size: 0.85rem; }
+  .ref-contact strong { font-weight: bold; }
+  .ref-contact a { color: #1a0dab; text-decoration: none; }
   .pdf-btn {
     position: fixed; bottom: 30px; right: 30px;
     background: #1d4e7f; color: white; border: none;
-    padding: 14px 24px; border-radius: 50px; font-size: 1rem;
-    font-weight: 600; cursor: pointer;
-    box-shadow: 0 4px 20px rgba(29,78,127,0.4);
-    z-index: 999;
+    padding: 12px 24px; border-radius: 5px;
+    font-size: 1rem; font-weight: bold; cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 999;
   }
   .pdf-btn:hover { background: #0e3a5e; }
-  
-  /* Profile picture formatting */
-  .profile-pic {
-    width: 130px; height: 130px; border-radius: 50%;
-    object-fit: cover; border: 4px solid #b0c4de;
-    margin-bottom: 0.6rem;
-    display: block;
-  }
-  
-  .name { font-size: 2.6rem; font-weight: 700; color: #1e2a3e; margin-bottom: 0.2rem; }
-  .subhead { font-size: 0.95rem; color: #3d4b60; margin-top: 0.3rem;
-    display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
-  .contact-line {
-    display: flex; flex-wrap: wrap; gap: 0.5rem 1.8rem;
-    margin-top: 0.6rem; font-size: 0.95rem; color: #2c3a4f;
-    border-bottom: 2px solid #dce3ec; padding-bottom: 1rem;
-  }
-  .contact-line a { color: #1d4e7f; text-decoration: none; }
-  .section { margin: 1.6rem 0; }
-  .section-title {
-    font-size: 1.2rem; font-weight: 700; text-transform: uppercase;
-    color: #0b2a4a; border-bottom: 3px solid #b0c4de;
-    padding-bottom: 0.25rem; margin-bottom: 1rem;
-  }
-  .edu-item { margin-bottom: 0.9rem; }
-  .edu-title { font-weight: 700; font-size: 1.05rem; color: #1e2a3e; }
-  .edu-meta { font-size: 0.92rem; color: #3e5066;
-    display: flex; flex-wrap: wrap; gap: 1rem; }
-  .grade { font-weight: 600; color: #0e4b3b;
-    background: #e4f0ea; padding: 0.1rem 0.6rem;
-    border-radius: 20px; font-size: 0.85rem; }
-  .project-item { margin-bottom: 0.9rem; }
-  .project-title { font-weight: 700; font-size: 1rem; color: #103a5c; }
-  .project-desc { font-size: 0.93rem; color: #2f4056;
-    padding-left: 0.8rem; border-left: 3px solid #b0c4de;
-    margin-top: 0.15rem; }
-  .project-desc ul { list-style: none; padding-left: 0; }
-  .project-desc li { margin-bottom: 0.2rem; padding-left: 1.1rem;
-    position: relative; }
-  .project-desc li::before { content: "▹"; position: absolute;
-    left: 0; color: #2e6b9e; }
-  .seminar-item { margin-bottom: 0.8rem; }
-  .seminar-title { font-weight: 600; color: #1e2a3e; font-size: 0.98rem; }
-  .seminar-desc { font-size: 0.92rem; color: #2d3e54; padding-left: 0.4rem; }
-  .award-item { margin-bottom: 0.6rem; font-size: 0.95rem; }
-  .award-name { font-weight: 700; color: #0b2a4a; }
-  .skills-grid { display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 1rem 2rem; }
-  .skill-category h4 { font-size: 0.98rem; font-weight: 700;
-    color: #0b2a4a; margin-bottom: 0.3rem;
-    border-bottom: 1px dashed #b8c9dd; padding-bottom: 0.15rem; }
-  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; }
-  .skill-tag { background: #eef3f9; border-radius: 30px;
-    padding: 0.15rem 0.8rem; font-size: 0.83rem;
-    color: #1d3b5c; border: 1px solid #cddae9; }
-  .lang-list { display: flex; flex-wrap: wrap; gap: 1.2rem;
-    font-size: 0.95rem; }
-  .recommendation { background: #f6f9fe; border-left: 6px solid #2e6b9e;
-    padding: 1rem 1.2rem; border-radius: 12px;
-    margin-bottom: 0.8rem; font-size: 0.93rem; }
-  .ref-name { font-weight: 700; font-size: 1rem; color: #103a5c; }
-  .ref-contact { display: flex; flex-wrap: wrap; gap: 0.8rem 1.5rem;
-    margin-top: 0.4rem; font-size: 0.9rem; }
-  .ref-contact a { color: #1d4e7f; text-decoration: none; }
-  
-  /* Print settings for PDF generation */
   @media print {
     body { background: #fff; padding: 0; display: block; }
-    .cv { box-shadow: none; border-radius: 0; padding: 0; max-width: 100%; }
+    .cv { box-shadow: none; max-width: 100%; padding: 0; }
     .pdf-btn { display: none; }
-    .profile-pic { display: block; margin: 0 auto 0.6rem auto; }
+    .header { margin-bottom: 1.5rem; }
+    .section { page-break-inside: avoid; }
   }
 </style>
 </head>
 <body>
 <div class="cv">
-  <!-- Profile Picture -->
-  <img src="assets/1792525727069.jpg" alt="Mehwish Arooj" class="profile-pic" onerror="this.style.display='none'">
-  
-  <h1 class="name">Mehwish Arooj</h1>
-  <div class="subhead">
-    <span>📅 16/09/2003</span>
-    <span>🇵🇰 Pakistan · Female</span>
-  </div>
-  <div class="contact-line">
-    <span>📞 0318 7204882</span>
-    <span>✉️ <a href="mailto:Mehwisharooj40@gmail.com">Mehwisharooj40@gmail.com</a></span>
-    <span>🏠 Eid gah GT Road, Gujrat (Pakistan)</span>
+  <div class="header">
+    <img src="assets/1792525727069.jpg" alt="Mehwish Arooj" class="profile-pic" onerror="this.style.display='none'">
+    <div class="header-info">
+      <div class="name">Mehwish Arooj</div>
+      <div class="contact-row">
+        <span><strong>Date of birth:</strong> 16/09/2003</span>
+        <span><strong>Place of birth:</strong> Pakistan</span>
+        <span><strong>Gender:</strong> Female</span>
+      </div>
+      <div class="contact-row">
+        <span>📞 <strong>Phone number:</strong> 0318 7204882</span>
+        <span>✉️ <strong>Email address:</strong> <a href="mailto:Mehwisharooj40@gmail.com">Mehwisharooj40@gmail.com</a></span>
+      </div>
+      <div class="contact-row">
+        <span>🏠 <strong>Home:</strong> Eid gah GT Road, Gujrat (Pakistan)</span>
+      </div>
+    </div>
   </div>
 
   <div class="section">
-    <h2 class="section-title">Education and Training</h2>
+    <div class="section-title">EDUCATION AND TRAINING</div>
     <div class="edu-item">
       <div class="edu-title">Bachelor of Science (Honors) in Biotechnology</div>
-      <div class="edu-meta">2022 – 2026 · University of Gujrat ·
-        <a href="https://www.uog.edu.pk">www.uog.edu.pk</a></div>
-      <div style="margin-top:0.2rem">
-        <span class="grade">Final grade: 3.84 / 4.0</span>
+      <div class="edu-school">University of Gujrat [ 2022 – 2026 ]</div>
+      <div class="edu-meta">
+        <span><strong>City:</strong> Gujrat</span>
+        <span><strong>Country:</strong> Pakistan</span>
+        <span><strong>Website:</strong> <a href="https://www.uog.edu.pk">www.uog.edu.pk</a></span>
+        <span><strong>Final grade:</strong> 3.84/4.0</span>
       </div>
     </div>
     <div class="edu-item">
-      <div class="edu-title">FSC (Pre‑medical)</div>
-      <div class="edu-meta">2019 – 2021 · BISE Gujranwala ·
-        <a href="https://www.bisegrw.edu.pk">www.bisegrw.edu.pk</a></div>
-      <div style="margin-top:0.2rem; font-size:0.9rem; color:#536b82">
-        Field of study: Biology</div>
+      <div class="edu-title">FSC (premedical)</div>
+      <div class="edu-school">Board of Intermediate and Secondary Education Gujranwala [ 2019 – 2021 ]</div>
+      <div class="edu-meta">
+        <span><strong>City:</strong> Gujrat</span>
+        <span><strong>Country:</strong> Pakistan</span>
+        <span><strong>Website:</strong> <a href="https://www.bisegrw.edu.pk">www.bisegrw.edu.pk</a></span>
+        <span><strong>Field(s) of study:</strong> Biology</span>
+      </div>
     </div>
   </div>
 
   <div class="section">
-    <h2 class="section-title">Projects</h2>
-    <!-- Tatta Pani project removed as requested -->
+    <div class="section-title">PROJECTS</div>
     <div class="project-item">
-      <div class="project-title">Micropropagation of Wheat Calluses</div>
-      <div class="project-desc"><ul>
-        <li>Induced embryogenic callus formation under sterile conditions.</li>
-        <li>Maintained and sub‑cultured callus cultures.</li>
-        <li>Performed <em>Agrobacterium tumefaciens</em> transformation.</li>
-      </ul></div>
+      <div class="project-title">Micropropagation of wheat calluses</div>
+      <div class="project-desc">Induced embryogenic callus formation from wheat explants under sterile conditions. Maintained and sub cultured callus cultures for plant tissue propagation. Performed Agrobacterium tumefaciens mediated transformation techniques.</div>
     </div>
     <div class="project-item">
-      <div class="project-title">E. coli Competent Cell Preparation &amp; Transformation</div>
-      <div class="project-desc"><ul>
-        <li>Prepared chemically competent <em>E. coli</em> cells.</li>
-        <li>Performed plasmid transformation with an available construct.</li>
-        <li>Evaluated transformation success microbiologically.</li>
-      </ul></div>
+      <div class="project-title">E. coli Competent Cell Preparation & Transformation</div>
+      <div class="project-desc">Prepared chemically competent Escherichia coli cells. Performed plasmid transformation using an available DNA construct. Evaluated transformation success using standard microbiological techniques.</div>
     </div>
     <div class="project-item">
-      <div class="project-title">Quantification of Protein in Local Duckweed</div>
-      <div class="project-desc"><ul>
-        <li>Estimated total protein via Bradford assay.</li>
-        <li>Prepared standards and measured absorbance.</li>
-        <li>Interpreted data for comparative quantification.</li>
-      </ul></div>
+      <div class="project-title">Quantification of Protein in Local Duckweed.</div>
+      <div class="project-desc">Estimated total protein content of local duckweed samples using the Bradford assay. Prepared standards and measured absorbance with spectrophotometric analysis. Interpreted experimental data for comparative protein quantification.</div>
     </div>
     <div class="project-item">
       <div class="project-title">Microscopic Identification of Plant Species</div>
-      <div class="project-desc"><ul>
-        <li>Identified 35 species via leaf anatomy microscopy.</li>
-        <li>Distinguished species by midrib and vascular bundles.</li>
-        <li>Documented anatomical characters for taxonomy.</li>
-      </ul></div>
+      <div class="project-desc">Identified 35 plant species using microscopic examination of leaf anatomy. Distinguished species based on midrib and vascular bundle arrangements. Recorded and documented anatomical characteristics for taxonomic identification.</div>
     </div>
   </div>
 
   <div class="section">
-    <h2 class="section-title">Seminars &amp; Scientific Engagement</h2>
+    <div class="section-title">CONFERENCES AND SEMINARS</div>
+    <div class="project-desc-block" style="margin-bottom: 0.5rem;">University of Gujrat department of biochemistry and biotechnology along with botany.</div>
+    
     <div class="seminar-item">
-      <div class="seminar-title">“Concept of Robanity” — Prof. Andreas (Germany)</div>
-      <div class="seminar-desc">
-        Biodiversity and plant sampling seminar; discussed climate change
-        impacts and GMO crops for stress tolerance as conservation tool.<br />
-        <em>University of Gujrat — Ibn e Seena Block.</em>
-      </div>
+      <div class="seminar-title">Concept of Robanity</div>
+      <div class="seminar-desc">Attended a scientific seminar delivered by Prof. Andreas (Germany) on biodiversity and plant sampling. Participated in the scientific discussion by asking questions regarding the impact of climate change and temperature on the research. Discussed the potential role of genetically modified (GMO) crops with enhanced temperature and stress tolerance as a complementary approach to conservation.</div>
+      <div class="project-desc-block" style="margin-top: 0.2rem;">University of Gujrat Ibn e Seena block</div>
     </div>
     <div class="seminar-item">
       <div class="seminar-title">Seminar: Diabetes (Advances in Research)</div>
-      <div class="seminar-desc">
-        Organizer: Dr. Awais Asif, Dept. of Biochemistry &amp; Biotechnology,
-        University of Gujrat. Covered pathophysiology, risk factors,
-        current research; active Q&amp;A participation.
-      </div>
+      <div class="seminar-desc"><strong>Organizer:</strong> Dr. Awais Asif, Department of Biochemistry & Biotechnology, University of Gujrat. Attended a scientific seminar on diabetes, its pathophysiology, risk factors, and current research. Actively participated in the question- and- answer session by discussing factors influencing diabetes prevalence across different age groups. Demonstrated analytical thinking and scientific curiosity through engagement with the speaker and fellow participants.</div>
     </div>
   </div>
 
   <div class="section">
-    <h2 class="section-title">Honours and Awards</h2>
+    <div class="section-title">HONOURS AND AWARDS</div>
     <div class="award-item">
-      <span class="award-name">University of Gujrat Merit Scholarship</span>
-      — Top three students by CGPA each semester; granted three times.
+      <div class="project-desc-block" style="color: #555; font-size: 0.85rem;">University of Gujrat</div>
+      <div class="award-name">University of Gujrat merit scholarship</div>
+      <div class="award-desc" style="display: inline;">University of Gujrat selects top three students will top CGPA each semester so I was granted three times</div>
     </div>
     <div class="award-item">
-      <span class="award-name">Prime Minister Laptop Award</span>
-      — For outstanding academic performance during the bachelor's degree.
+      <div class="project-desc-block" style="color: #555; font-size: 0.85rem;">University of Gujrat</div>
+      <div class="award-name">Prime Minister Laptop Award</div>
+      <div class="award-desc" style="display: inline;">Recognized by the Prime Minister of Pakistan for outstanding academic performance during bachelor's degree.</div>
     </div>
   </div>
 
   <div class="section">
-    <h2 class="section-title">Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h4>Software &amp; Computational</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Microsoft Office</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Google Colab</span>
-          <span class="skill-tag">R</span>
-          <span class="skill-tag">GitHub</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <h4>Laboratory Skills</h4>
-        <div class="skill-tags">
-          <span class="skill-tag">Callus induction → micropropagation → transformation</span>
-          <span class="skill-tag">Microbial isolation → purification → DNA extraction</span>
-          <span class="skill-tag">Alkaline lysis DNA isolation</span>
-          <span class="skill-tag">Competent cell prep &amp; transformation</span>
-          <span class="skill-tag">Bradford assay &amp; spectrophotometry</span>
-          <span class="skill-tag">Light microscopy</span>
-        </div>
-      </div>
+    <div class="section-title">SKILLS</div>
+    <div class="skill-category">
+      <div class="skill-category-title">SOFTWARE SKILLS</div>
+      <div class="skill-list">Microsoft Office / Python / collabs / R/ GitHub Repositories</div>
+      <div class="skill-list">I'm very much excited to create my own database or bioinformatics programs if I have resources</div>
+    </div>
+    <div class="skill-category">
+      <div class="skill-category-title">Lab skills</div>
+      <div class="skill-list">Callus induction to micropropagation to transformation</div>
+      <div class="skill-list">Microbial sample picking to enrichment then isolation purification to Alkaline lysis DNA isolation, competent cell formation and transformation.</div>
+      <div class="skill-list">Biochemical analysis like Bedford, UV/visible spectroscopy and Microscopic (light compound microscope)</div>
     </div>
   </div>
 
   <div class="section">
-    <h2 class="section-title">Language Skills</h2>
+    <div class="section-title">LANGUAGE SKILLS</div>
     <div class="lang-list">
-      <span><strong>Urdu</strong> — native/fluent</span>
-      <span><strong>English</strong> — professional</span>
-      <span><strong>Punjabi</strong> — fluent</span>
+      <div style="margin-bottom: 0.2rem;"><strong>Other language:</strong> Urdu</div>
+      <div><strong>English, Punjabi</strong></div>
     </div>
   </div>
 
   <div class="section">
-    <h2 class="section-title">Recommendations</h2>
+    <div class="section-title">RECOMMENDATIONS</div>
     <div class="recommendation">
-      <div class="ref-name">Dr. Umer Rasheed — Professor</div>
-      <p>Chairperson, Dept. of Biochemistry and Biotechnology, University of
-      Gujrat. Plant biotechnology, GMOs, molecular biology, biological pest
-      control, nanobiotechnology. Led HEC-funded glyphosate-resistant wheat
-      and fungal phytase projects.</p>
+      <div class="ref-name">Name: Umer Rasheed</div>
+      <div class="ref-title">| Professor</div>
+      <div class="ref-desc">Dr Umer Rasheed is currently the chairperson of the department of biochemistry and biotechnology, His research focuses on plant biotechnology, genetically modified organisms (GMOs), molecular biology, biological pest control, and nanobiotechnology. He has led HEC- funded research projects, including the development of glyphosateresistant wheat and fungal phytase for improving poultry feed, and continues to contribute to research and higher education in Pakistan.</div>
       <div class="ref-contact">
-        <span>✉️ <a href="mailto:umer.rashid@uog.edu.pk">umer.rashid@uog.edu.pk</a></span>
-        <span>📞 (+92) 307 5039023</span>
+        <span><strong>Email:</strong> <a href="mailto:umer.rashid@uog.edu.pk">umer.rashid@uog.edu.pk</a></span>
+        <span><strong>Phone number:</strong> (+92) 3075039023</span>
       </div>
     </div>
     <div class="recommendation">
-      <div class="ref-name">Dr. Hamad Ismail — Professor</div>
-      <p>Dept. of Biochemistry and Biotechnology, University of Gujrat.
-      Biosafety Officer under Pakistan Biosafety Rules; Secretary of
-      Institutional Biosafety Committee. Member of Board of Studies and
-      Academic Council.</p>
+      <div class="ref-name">Name: Hamad Ismail</div>
+      <div class="ref-title">| Professor</div>
+      <div class="ref-desc">Dr. Hamad Ismail is in the Department of Biochemistry and Biotechnology at the University of Gujrat. He serves as the Biosafety Officer under Pakistan Biosafety Rules and is the Secretary of the Institutional Biosafety Committee. He is also a member of the Board of Studies and Academic Council.</div>
       <div class="ref-contact">
-        <span>✉️ <a href="mailto:hammad.ismail@uog.edu.pk">hammad.ismail@uog.edu.pk</a></span>
-        <span>📞 0333-6018587</span>
+        <span><strong>Email:</strong> <a href="mailto:hammad.ismail@uog.edu.pk">hammad.ismail@uog.edu.pk</a></span>
+        <span><strong>Phone number:</strong> 0333-6018587</span>
       </div>
     </div>
   </div>
-
-  <!-- Visualization section removed as requested -->
-  
 </div>
 <button class="pdf-btn" onclick="window.print()">📄 Download PDF</button>
 </body>
