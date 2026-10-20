@@ -5,284 +5,284 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mehwish Arooj · CV</title>
 <style>
- * { margin: 0; padding: 0; box-sizing: border-box; }
- body {
-   background: linear-gradient(135deg, #e6e9ef 0%, #d0d8e8 100%);
-   font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
-   line-height: 1.5; display: flex; justify-content: center;
-   padding: 2rem 1rem; min-height: 100vh;
- }
- .cv {
-   max-width: 1000px; width: 100%; background: #fff;
-   box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-   border-radius: 20px; padding: 2.2rem 2.4rem;
- }
- .pdf-btn {
-   position: fixed; bottom: 30px; right: 30px;
-   background: #1d4e7f; color: white; border: none;
-   padding: 14px 24px; border-radius: 50px; font-size: 1rem;
-   font-weight: 600; cursor: pointer;
-   box-shadow: 0 4px 20px rgba(29,78,127,0.4);
-   z-index: 999;
- }
- .pdf-btn:hover { background: #0e3a5e; }
- .profile-pic {
-   width: 130px; height: 130px; border-radius: 50%;
-   object-fit: cover; border: 4px solid #b0c4de;
-   margin-bottom: 0.6rem;
- }
- .greeting {
-   font-size: 1.1rem; color: #2e6b9e;
-   font-weight: 500; margin-bottom: 0.3rem; font-style: italic;
- }
- .name { font-size: 2.6rem; font-weight: 700; color: #1e2a3e; }
- .subhead { font-size: 0.95rem; color: #3d4b60; margin-top: 0.3rem;
-   display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
- .contact-line {
-   display: flex; flex-wrap: wrap; gap: 0.5rem 1.8rem;
-   margin-top: 0.6rem; font-size: 0.95rem; color: #2c3a4f;
-   border-bottom: 2px solid #dce3ec; padding-bottom: 1rem;
- }
- .contact-line a { color: #1d4e7f; text-decoration: none; }
- .section { margin: 1.6rem 0; }
- .section-title {
-   font-size: 1.2rem; font-weight: 700; text-transform: uppercase;
-   color: #0b2a4a; border-bottom: 3px solid #b0c4de;
-   padding-bottom: 0.25rem; margin-bottom: 1rem;
- }
- .edu-item { margin-bottom: 0.9rem; }
- .edu-title { font-weight: 700; font-size: 1.05rem; color: #1e2a3e; }
- .edu-meta { font-size: 0.92rem; color: #3e5066;
-   display: flex; flex-wrap: wrap; gap: 1rem; }
- .grade { font-weight: 600; color: #0e4b3b;
-   background: #e4f0ea; padding: 0.1rem 0.6rem;
-   border-radius: 20px; font-size: 0.85rem; }
- .project-item { margin-bottom: 0.9rem; }
- .project-title { font-weight: 700; font-size: 1rem; color: #103a5c; }
- .project-desc { font-size: 0.93rem; color: #2f4056;
-   padding-left: 0.8rem; border-left: 3px solid #b0c4de;
-   margin-top: 0.15rem; }
- .project-desc ul { list-style: none; padding-left: 0; }
- .project-desc li { margin-bottom: 0.2rem; padding-left: 1.1rem;
-   position: relative; }
- .project-desc li::before { content: "▹"; position: absolute;
-   left: 0; color: #2e6b9e; }
- .seminar-item { margin-bottom: 0.8rem; }
- .seminar-title { font-weight: 600; color: #1e2a3e; font-size: 0.98rem; }
- .seminar-desc { font-size: 0.92rem; color: #2d3e54; padding-left: 0.4rem; }
- .award-item { margin-bottom: 0.6rem; font-size: 0.95rem; }
- .award-name { font-weight: 700; color: #0b2a4a; }
- .skills-grid { display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-   gap: 1rem 2rem; }
- .skill-category h4 { font-size: 0.98rem; font-weight: 700;
-   color: #0b2a4a; margin-bottom: 0.3rem;
-   border-bottom: 1px dashed #b8c9dd; padding-bottom: 0.15rem; }
- .skill-tags { display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; }
- .skill-tag { background: #eef3f9; border-radius: 30px;
-   padding: 0.15rem 0.8rem; font-size: 0.83rem;
-   color: #1d3b5c; border: 1px solid #cddae9; }
- .lang-list { display: flex; flex-wrap: wrap; gap: 1.2rem;
-   font-size: 0.95rem; }
- .recommendation { background: #f6f9fe; border-left: 6px solid #2e6b9e;
-   padding: 1rem 1.2rem; border-radius: 12px;
-   margin-bottom: 0.8rem; font-size: 0.93rem; }
- .ref-name { font-weight: 700; font-size: 1rem; color: #103a5c; }
- .ref-contact { display: flex; flex-wrap: wrap; gap: 0.8rem 1.5rem;
-   margin-top: 0.4rem; font-size: 0.9rem; }
- .ref-contact a { color: #1d4e7f; text-decoration: none; }
- .viz-container { background: #f0f4fa; border-radius: 14px;
-   padding: 1.5rem; margin-top: 0.5rem; text-align: center;
-   border: 2px dashed #b0c4de; }
- .viz-container p { color: #536b82; font-size: 0.92rem; }
- @media print {
-   body { background: #fff; padding: 0.3in; display: block; }
-   .cv { box-shadow: none; border-radius: 0;
-     padding: 0.1in 0.2in; max-width: 100%; }
-   .pdf-btn { display: none; }
- }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: linear-gradient(135deg, #e6e9ef 0%, #d0d8e8 100%);
+    font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
+    line-height: 1.5; display: flex; justify-content: center;
+    padding: 2rem 1rem; min-height: 100vh;
+  }
+  .cv {
+    max-width: 1000px; width: 100%; background: #fff;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    border-radius: 20px; padding: 2.2rem 2.4rem;
+  }
+  .pdf-btn {
+    position: fixed; bottom: 30px; right: 30px;
+    background: #1d4e7f; color: white; border: none;
+    padding: 14px 24px; border-radius: 50px; font-size: 1rem;
+    font-weight: 600; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(29,78,127,0.4);
+    z-index: 999;
+  }
+  .pdf-btn:hover { background: #0e3a5e; }
+  .profile-pic {
+    width: 130px; height: 130px; border-radius: 50%;
+    object-fit: cover; border: 4px solid #b0c4de;
+    margin-bottom: 0.6rem;
+  }
+  .greeting {
+    font-size: 1.1rem; color: #2e6b9e;
+    font-weight: 500; margin-bottom: 0.3rem; font-style: italic;
+  }
+  .name { font-size: 2.6rem; font-weight: 700; color: #1e2a3e; }
+  .subhead { font-size: 0.95rem; color: #3d4b60; margin-top: 0.3rem;
+    display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+  .contact-line {
+    display: flex; flex-wrap: wrap; gap: 0.5rem 1.8rem;
+    margin-top: 0.6rem; font-size: 0.95rem; color: #2c3a4f;
+    border-bottom: 2px solid #dce3ec; padding-bottom: 1rem;
+  }
+  .contact-line a { color: #1d4e7f; text-decoration: none; }
+  .section { margin: 1.6rem 0; }
+  .section-title {
+    font-size: 1.2rem; font-weight: 700; text-transform: uppercase;
+    color: #0b2a4a; border-bottom: 3px solid #b0c4de;
+    padding-bottom: 0.25rem; margin-bottom: 1rem;
+  }
+  .edu-item { margin-bottom: 0.9rem; }
+  .edu-title { font-weight: 700; font-size: 1.05rem; color: #1e2a3e; }
+  .edu-meta { font-size: 0.92rem; color: #3e5066;
+    display: flex; flex-wrap: wrap; gap: 1rem; }
+  .grade { font-weight: 600; color: #0e4b3b;
+    background: #e4f0ea; padding: 0.1rem 0.6rem;
+    border-radius: 20px; font-size: 0.85rem; }
+  .project-item { margin-bottom: 0.9rem; }
+  .project-title { font-weight: 700; font-size: 1rem; color: #103a5c; }
+  .project-desc { font-size: 0.93rem; color: #2f4056;
+    padding-left: 0.8rem; border-left: 3px solid #b0c4de;
+    margin-top: 0.15rem; }
+  .project-desc ul { list-style: none; padding-left: 0; }
+  .project-desc li { margin-bottom: 0.2rem; padding-left: 1.1rem;
+    position: relative; }
+  .project-desc li::before { content: "▹"; position: absolute;
+    left: 0; color: #2e6b9e; }
+  .seminar-item { margin-bottom: 0.8rem; }
+  .seminar-title { font-weight: 600; color: #1e2a3e; font-size: 0.98rem; }
+  .seminar-desc { font-size: 0.92rem; color: #2d3e54; padding-left: 0.4rem; }
+  .award-item { margin-bottom: 0.6rem; font-size: 0.95rem; }
+  .award-name { font-weight: 700; color: #0b2a4a; }
+  .skills-grid { display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 1rem 2rem; }
+  .skill-category h4 { font-size: 0.98rem; font-weight: 700;
+    color: #0b2a4a; margin-bottom: 0.3rem;
+    border-bottom: 1px dashed #b8c9dd; padding-bottom: 0.15rem; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.3rem 0.5rem; }
+  .skill-tag { background: #eef3f9; border-radius: 30px;
+    padding: 0.15rem 0.8rem; font-size: 0.83rem;
+    color: #1d3b5c; border: 1px solid #cddae9; }
+  .lang-list { display: flex; flex-wrap: wrap; gap: 1.2rem;
+    font-size: 0.95rem; }
+  .recommendation { background: #f6f9fe; border-left: 6px solid #2e6b9e;
+    padding: 1rem 1.2rem; border-radius: 12px;
+    margin-bottom: 0.8rem; font-size: 0.93rem; }
+  .ref-name { font-weight: 700; font-size: 1rem; color: #103a5c; }
+  .ref-contact { display: flex; flex-wrap: wrap; gap: 0.8rem 1.5rem;
+    margin-top: 0.4rem; font-size: 0.9rem; }
+  .ref-contact a { color: #1d4e7f; text-decoration: none; }
+  .viz-container { background: #f0f4fa; border-radius: 14px;
+    padding: 1.5rem; margin-top: 0.5rem; text-align: center;
+    border: 2px dashed #b0c4de; }
+  .viz-container p { color: #536b82; font-size: 0.92rem; }
+  @media print {
+    body { background: #fff; padding: 0.3in; display: block; }
+    .cv { box-shadow: none; border-radius: 0;
+      padding: 0.1in 0.2in; max-width: 100%; }
+    .pdf-btn { display: none; }
+  }
 </style>
 </head>
 <body>
 <div class="cv">
- <div class="greeting">👋 Hi Mehwish, here is your CV — made by Zariab</div>
- <img src="assets/1792525727069.jpg" alt="Mehwish Arooj" class="profile-pic"
-      onerror="this.style.display='none'">
- <h1 class="name">Mehwish Arooj</h1>
- <div class="subhead">
-   <span>📅 16/09/2003</span>
-   <span>🇵🇰 Pakistan · Female</span>
- </div>
- <div class="contact-line">
-   <span>📞 0318 7204882</span>
-   <span>✉️ <a href="mailto:Mehwisharooj40@gmail.com">Mehwisharooj40@gmail.com</a></span>
-   <span>🏠 Eid gah GT Road, Gujrat (Pakistan)</span>
- </div>
+  <div class="greeting">👋 Hi Mehwish, here is your CV — made by Zariab</div>
+  <img src="assets/1792525727069 (1).jpg" alt="Mehwish Arooj" class="profile-pic"
+       onerror="this.style.display='none'">
+  <h1 class="name">Mehwish Arooj</h1>
+  <div class="subhead">
+    <span>📅 16/09/2003</span>
+    <span>🇵🇰 Pakistan · Female</span>
+  </div>
+  <div class="contact-line">
+    <span>📞 0318 7204882</span>
+    <span>✉️ <a href="mailto:Mehwisharooj40@gmail.com">Mehwisharooj40@gmail.com</a></span>
+    <span>🏠 Eid gah GT Road, Gujrat (Pakistan)</span>
+  </div>
 
- <div class="section">
-   <h2 class="section-title">Education and Training</h2>
-   <div class="edu-item">
-     <div class="edu-title">Bachelor of Science (Honors) in Biotechnology</div>
-     <div class="edu-meta">2022 – 2026 · University of Gujrat ·
-       <a href="https://www.uog.edu.pk">www.uog.edu.pk</a></div>
-     <div style="margin-top:0.2rem">
-       <span class="grade">Final grade: 3.84 / 4.0</span>
-     </div>
-   </div>
-   <div class="edu-item">
-     <div class="edu-title">FSC (Pre‑medical)</div>
-     <div class="edu-meta">2019 – 2021 · BISE Gujranwala ·
-       <a href="https://www.bisegrw.edu.pk">www.bisegrw.edu.pk</a></div>
-     <div style="margin-top:0.2rem; font-size:0.9rem; color:#536b82">
-       Field of study: Biology</div>
-   </div>
- </div>
+  <div class="section">
+    <h2 class="section-title">Education and Training</h2>
+    <div class="edu-item">
+      <div class="edu-title">Bachelor of Science (Honors) in Biotechnology</div>
+      <div class="edu-meta">2022 – 2026 · University of Gujrat ·
+        <a href="https://www.uog.edu.pk">www.uog.edu.pk</a></div>
+      <div style="margin-top:0.2rem">
+        <span class="grade">Final grade: 3.84 / 4.0</span>
+      </div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-title">FSC (Pre‑medical)</div>
+      <div class="edu-meta">2019 – 2021 · BISE Gujranwala ·
+        <a href="https://www.bisegrw.edu.pk">www.bisegrw.edu.pk</a></div>
+      <div style="margin-top:0.2rem; font-size:0.9rem; color:#536b82">
+        Field of study: Biology</div>
+    </div>
+  </div>
 
- <div class="section">
-   <h2 class="section-title">Projects</h2>
-   <div class="project-item">
-     <div class="project-title">Isolation of Thermophilic Bacteria from
-       Tatta Pani, Azad Kashmir</div>
-     <div class="project-desc"><ul>
-       <li>Collected and cultured thermophilic bacterial samples from hot springs.</li>
-       <li>Isolated four strains by temperature tolerance, morphology, biochemistry.</li>
-       <li>Extracted genomic DNA using alkaline lysis.</li>
-     </ul></div>
-   </div>
-   <div class="project-item">
-     <div class="project-title">Micropropagation of Wheat Calluses</div>
-     <div class="project-desc"><ul>
-       <li>Induced embryogenic callus formation under sterile conditions.</li>
-       <li>Maintained and sub‑cultured callus cultures.</li>
-       <li>Performed <em>Agrobacterium tumefaciens</em> transformation.</li>
-     </ul></div>
-   </div>
-   <div class="project-item">
-     <div class="project-title">E. coli Competent Cell Preparation &amp; Transformation</div>
-     <div class="project-desc"><ul>
-       <li>Prepared chemically competent <em>E. coli</em> cells.</li>
-       <li>Performed plasmid transformation with an available construct.</li>
-       <li>Evaluated transformation success microbiologically.</li>
-     </ul></div>
-   </div>
-   <div class="project-item">
-     <div class="project-title">Quantification of Protein in Local Duckweed</div>
-     <div class="project-desc"><ul>
-       <li>Estimated total protein via Bradford assay.</li>
-       <li>Prepared standards and measured absorbance.</li>
-       <li>Interpreted data for comparative quantification.</li>
-     </ul></div>
-   </div>
-   <div class="project-item">
-     <div class="project-title">Microscopic Identification of Plant Species</div>
-     <div class="project-desc"><ul>
-       <li>Identified 35 species via leaf anatomy microscopy.</li>
-       <li>Distinguished species by midrib and vascular bundles.</li>
-       <li>Documented anatomical characters for taxonomy.</li>
-     </ul></div>
-   </div>
- </div>
+  <div class="section">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-item">
+      <div class="project-title">Isolation of Thermophilic Bacteria from
+        Tatta Pani, Azad Kashmir</div>
+      <div class="project-desc"><ul>
+        <li>Collected and cultured thermophilic bacterial samples from hot springs.</li>
+        <li>Isolated four strains by temperature tolerance, morphology, biochemistry.</li>
+        <li>Extracted genomic DNA using alkaline lysis.</li>
+      </ul></div>
+    </div>
+    <div class="project-item">
+      <div class="project-title">Micropropagation of Wheat Calluses</div>
+      <div class="project-desc"><ul>
+        <li>Induced embryogenic callus formation under sterile conditions.</li>
+        <li>Maintained and sub‑cultured callus cultures.</li>
+        <li>Performed <em>Agrobacterium tumefaciens</em> transformation.</li>
+      </ul></div>
+    </div>
+    <div class="project-item">
+      <div class="project-title">E. coli Competent Cell Preparation &amp; Transformation</div>
+      <div class="project-desc"><ul>
+        <li>Prepared chemically competent <em>E. coli</em> cells.</li>
+        <li>Performed plasmid transformation with an available construct.</li>
+        <li>Evaluated transformation success microbiologically.</li>
+      </ul></div>
+    </div>
+    <div class="project-item">
+      <div class="project-title">Quantification of Protein in Local Duckweed</div>
+      <div class="project-desc"><ul>
+        <li>Estimated total protein via Bradford assay.</li>
+        <li>Prepared standards and measured absorbance.</li>
+        <li>Interpreted data for comparative quantification.</li>
+      </ul></div>
+    </div>
+    <div class="project-item">
+      <div class="project-title">Microscopic Identification of Plant Species</div>
+      <div class="project-desc"><ul>
+        <li>Identified 35 species via leaf anatomy microscopy.</li>
+        <li>Distinguished species by midrib and vascular bundles.</li>
+        <li>Documented anatomical characters for taxonomy.</li>
+      </ul></div>
+    </div>
+  </div>
 
- <div class="section">
-   <h2 class="section-title">Seminars &amp; Scientific Engagement</h2>
-   <div class="seminar-item">
-     <div class="seminar-title">“Concept of Robanity” — Prof. Andreas (Germany)</div>
-     <div class="seminar-desc">
-       Biodiversity and plant sampling seminar; discussed climate change
-       impacts and GMO crops for stress tolerance as conservation tool.<br />
-       <em>University of Gujrat — Ibn e Seena Block.</em>
-     </div>
-   </div>
-   <div class="seminar-item">
-     <div class="seminar-title">Seminar: Diabetes (Advances in Research)</div>
-     <div class="seminar-desc">
-       Organizer: Dr. Awais Asif, Dept. of Biochemistry &amp; Biotechnology,
-       University of Gujrat. Covered pathophysiology, risk factors,
-       current research; active Q&amp;A participation.
-     </div>
-   </div>
- </div>
+  <div class="section">
+    <h2 class="section-title">Seminars &amp; Scientific Engagement</h2>
+    <div class="seminar-item">
+      <div class="seminar-title">“Concept of Robanity” — Prof. Andreas (Germany)</div>
+      <div class="seminar-desc">
+        Biodiversity and plant sampling seminar; discussed climate change
+        impacts and GMO crops for stress tolerance as conservation tool.<br />
+        <em>University of Gujrat — Ibn e Seena Block.</em>
+      </div>
+    </div>
+    <div class="seminar-item">
+      <div class="seminar-title">Seminar: Diabetes (Advances in Research)</div>
+      <div class="seminar-desc">
+        Organizer: Dr. Awais Asif, Dept. of Biochemistry &amp; Biotechnology,
+        University of Gujrat. Covered pathophysiology, risk factors,
+        current research; active Q&amp;A participation.
+      </div>
+    </div>
+  </div>
 
- <div class="section">
-   <h2 class="section-title">Honours and Awards</h2>
-   <div class="award-item">
-     <span class="award-name">University of Gujrat Merit Scholarship</span>
-     — Top three students by CGPA each semester; granted three times.
-   </div>
-   <div class="award-item">
-     <span class="award-name">Prime Minister Laptop Award</span>
-     — For outstanding academic performance during the bachelor's degree.
-   </div>
- </div>
+  <div class="section">
+    <h2 class="section-title">Honours and Awards</h2>
+    <div class="award-item">
+      <span class="award-name">University of Gujrat Merit Scholarship</span>
+      — Top three students by CGPA each semester; granted three times.
+    </div>
+    <div class="award-item">
+      <span class="award-name">Prime Minister Laptop Award</span>
+      — For outstanding academic performance during the bachelor's degree.
+    </div>
+  </div>
 
- <div class="section">
-   <h2 class="section-title">Skills</h2>
-   <div class="skills-grid">
-     <div class="skill-category">
-       <h4>Software &amp; Computational</h4>
-       <div class="skill-tags">
-         <span class="skill-tag">Microsoft Office</span>
-         <span class="skill-tag">Python</span>
-         <span class="skill-tag">Google Colab</span>
-         <span class="skill-tag">R</span>
-         <span class="skill-tag">GitHub</span>
-       </div>
-     </div>
-     <div class="skill-category">
-       <h4>Laboratory Skills</h4>
-       <div class="skill-tags">
-         <span class="skill-tag">Callus induction → micropropagation → transformation</span>
-         <span class="skill-tag">Microbial isolation → purification → DNA extraction</span>
-         <span class="skill-tag">Alkaline lysis DNA isolation</span>
-         <span class="skill-tag">Competent cell prep &amp; transformation</span>
-         <span class="skill-tag">Bradford assay &amp; spectrophotometry</span>
-         <span class="skill-tag">Light microscopy</span>
-       </div>
-     </div>
-   </div>
- </div>
+  <div class="section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h4>Software &amp; Computational</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Microsoft Office</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Google Colab</span>
+          <span class="skill-tag">R</span>
+          <span class="skill-tag">GitHub</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h4>Laboratory Skills</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Callus induction → micropropagation → transformation</span>
+          <span class="skill-tag">Microbial isolation → purification → DNA extraction</span>
+          <span class="skill-tag">Alkaline lysis DNA isolation</span>
+          <span class="skill-tag">Competent cell prep &amp; transformation</span>
+          <span class="skill-tag">Bradford assay &amp; spectrophotometry</span>
+          <span class="skill-tag">Light microscopy</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
- <div class="section">
-   <h2 class="section-title">Language Skills</h2>
-   <div class="lang-list">
-     <span><strong>Urdu</strong> — native/fluent</span>
-     <span><strong>English</strong> — professional</span>
-     <span><strong>Punjabi</strong> — fluent</span>
-   </div>
- </div>
+  <div class="section">
+    <h2 class="section-title">Language Skills</h2>
+    <div class="lang-list">
+      <span><strong>Urdu</strong> — native/fluent</span>
+      <span><strong>English</strong> — professional</span>
+      <span><strong>Punjabi</strong> — fluent</span>
+    </div>
+  </div>
 
- <div class="section">
-   <h2 class="section-title">Recommendations</h2>
-   <div class="recommendation">
-     <div class="ref-name">Dr. Umer Rasheed — Professor</div>
-     <p>Chairperson, Dept. of Biochemistry and Biotechnology, University of
-     Gujrat. Plant biotechnology, GMOs, molecular biology, biological pest
-     control, nanobiotechnology. Led HEC-funded glyphosate-resistant wheat
-     and fungal phytase projects.</p>
-     <div class="ref-contact">
-       <span>✉️ <a href="mailto:umer.rashid@uog.edu.pk">umer.rashid@uog.edu.pk</a></span>
-       <span>📞 (+92) 307 5039023</span>
-     </div>
-   </div>
-   <div class="recommendation">
-     <div class="ref-name">Dr. Hamad Ismail — Professor</div>
-     <p>Dept. of Biochemistry and Biotechnology, University of Gujrat.
-     Biosafety Officer under Pakistan Biosafety Rules; Secretary of
-     Institutional Biosafety Committee. Member of Board of Studies and
-     Academic Council.</p>
-     <div class="ref-contact">
-       <span>✉️ <a href="mailto:hammad.ismail@uog.edu.pk">hammad.ismail@uog.edu.pk</a></span>
-       <span>📞 0333-6018587</span>
-     </div>
-   </div>
- </div>
+  <div class="section">
+    <h2 class="section-title">Recommendations</h2>
+    <div class="recommendation">
+      <div class="ref-name">Dr. Umer Rasheed — Professor</div>
+      <p>Chairperson, Dept. of Biochemistry and Biotechnology, University of
+      Gujrat. Plant biotechnology, GMOs, molecular biology, biological pest
+      control, nanobiotechnology. Led HEC-funded glyphosate-resistant wheat
+      and fungal phytase projects.</p>
+      <div class="ref-contact">
+        <span>✉️ <a href="mailto:umer.rashid@uog.edu.pk">umer.rashid@uog.edu.pk</a></span>
+        <span>📞 (+92) 307 5039023</span>
+      </div>
+    </div>
+    <div class="recommendation">
+      <div class="ref-name">Dr. Hamad Ismail — Professor</div>
+      <p>Dept. of Biochemistry and Biotechnology, University of Gujrat.
+      Biosafety Officer under Pakistan Biosafety Rules; Secretary of
+      Institutional Biosafety Committee. Member of Board of Studies and
+      Academic Council.</p>
+      <div class="ref-contact">
+        <span>✉️ <a href="mailto:hammad.ismail@uog.edu.pk">hammad.ismail@uog.edu.pk</a></span>
+        <span>📞 0333-6018587</span>
+      </div>
+    </div>
+  </div>
 
- <div class="section">
-   <h2 class="section-title">Visualization</h2>
-   <div class="viz-container">
-     <p>📊 Visualization area — replace this content with your chart image.</p>
-   </div>
- </div>
+  <div class="section">
+    <h2 class="section-title">Visualization</h2>
+    <div class="viz-container">
+      <p>📊 Visualization area — replace this content with your chart image.</p>
+    </div>
+  </div>
 </div>
 <button class="pdf-btn" onclick="window.print()">📄 Download PDF</button>
 </body>
